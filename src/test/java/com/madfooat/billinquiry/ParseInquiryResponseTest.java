@@ -21,6 +21,16 @@ public class ParseInquiryResponseTest {
         parseXMLInquiryResponse.parse(INVALID_XML_RESPONSE);
     }
 
+    @Test(expected = InvalidBillInquiryResponse.class)
+    public void givenInvalidXMLResponse_ToCheckAmount_WhenParse_ThenThrowException() {
+        parseXMLInquiryResponse.parse(INVALID_XML_RESPONSE_SECOND);
+    }
+
+    @Test(expected = InvalidBillInquiryResponse.class)
+    public void givenInvalidXMLResponse_ToFutureDate_WhenParse_ThenThrowException() {
+        parseXMLInquiryResponse.parse(INVALID_XML_RESPONSE_THIRD);
+    }
+
     @Test
     public void givenValidJSONResponse_WhenParse_ThenReturnValidBillsList() {
         assertEquals(2, parseJSONInquiryResponse.parse(VALID_JSON_RESPONSE).size());

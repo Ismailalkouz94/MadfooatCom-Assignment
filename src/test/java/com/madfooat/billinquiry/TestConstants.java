@@ -26,6 +26,26 @@ public class TestConstants {
                     "   </bill>" +
                     "</Bills>";
 
+    public static final String INVALID_XML_RESPONSE_SECOND =
+            "<?xml version=\"1.0\"?>" +
+                    "<Bills>" +
+                    "   <bill id='1'>" +
+                    "       <dueDate>15-08-2017</dueDate>" +
+                    "       <dueAmount>198.9889</dueAmount>" +
+                    "       <fees>200.139</fees>" +
+                    "   </bill>" +
+                    "</Bills>";
+
+    public static final String INVALID_XML_RESPONSE_THIRD =
+            "<?xml version=\"1.0\"?>" +
+                    "<Bills>" +
+                    "   <bill id='1'>" +
+                    "       <dueDate>15-08-2022</dueDate>" +
+                    "       <dueAmount>198.9889</dueAmount>" +
+                    "       <fees>0.139</fees>" +
+                    "   </bill>" +
+                    "</Bills>";
+
 
     public static final String VALID_JSON_RESPONSE = "[{\"dueDate\": \"15-08-2017\",\"dueAmount\": \"198.98\",\"fees\": \"0.139\"},{\"dueDate\": \"13-07-2017\",\"dueAmount\": \"50.989\"}]";
 
